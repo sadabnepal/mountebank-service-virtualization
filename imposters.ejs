@@ -1,5 +1,17 @@
 {
     "imposters": [
-        <% include imposters/books.ejs %>
+        {
+            "port": 4545,
+            "protocol": "http",
+            "name": "users stub",
+            "recordRequest": false,
+            "defaultResponse": {
+                "statusCode": 400,
+                "body": "bad request"
+            },
+            "stubs": [
+                <% include stubs/getUsers.ejs %>
+            ]
+        }
     ]
 }

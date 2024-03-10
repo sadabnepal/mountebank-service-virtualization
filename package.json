@@ -1,15 +1,14 @@
 {
-  "name": "mountebank-learning",
+  "name": "mountebank-service-virtualization",
   "description": "test service using mocha and supertest.",
   "version": "0.0.1",
   "license": "UNLICENSED",
   "scripts": {
-    "mock": "mb --configfile imposters.ejs --allowInjection --loglevel info"
+    "prestart": "node helper/fetchUsers.js",
+    "start": "mb --configfile imposters.ejs --allowInjection --loglevel info"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "mountebank": "^2.9.1"
-  },
-  "devDependencies": {
-    "@faker-js/faker": "^8.4.1"
   }
 }
