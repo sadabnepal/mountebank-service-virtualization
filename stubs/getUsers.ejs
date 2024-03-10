@@ -1,0 +1,15 @@
+{
+    "predicates": [
+        {
+            "equals": {
+                "method": "GET",
+                "path": "/users"
+            }
+        }
+    ],
+    "responses": [
+        {
+            "inject": "<%- stringify(filename, "response/users.js) %>"
+        }
+    ]
+}
