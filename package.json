@@ -4,11 +4,9 @@
   "version": "0.0.1",
   "license": "UNLICENSED",
   "scripts": {
-    "prestart": "node helper/fetchUsers.js",
     "start": "mb --configfile imposters.ejs --allowInjection --loglevel info"
   },
   "dependencies": {
-    "@faker-js/faker": "^8.4.1",
     "mountebank": "^2.9.1"
   }
 }

@@ -1,0 +1,24 @@
+{
+    "predicates": [
+        {
+            "and": [
+                {
+                    "equals": {
+                        "method": "POST",
+                        "path": "/api/users"
+                    }
+                },
+                {
+                    "exists": { 
+                        "body": true 
+                    }
+                }
+            ]
+        }
+    ],
+    "responses": [
+        {
+            "inject": "<%- stringify(filename, 'helper/createUser.js') %>"
+        }
+    ]
+}
