@@ -1,0 +1,24 @@
+{
+    "predicates": [
+        {
+            "and": [
+                {
+                    "equals": {
+                        "method": "POST",
+                        "path": "/api/register"
+                    }
+                },
+                {
+                    "exists": {
+                        "body": true
+                    }
+                }
+            ]
+        }
+    ],
+    "responses": [
+        {
+            "inject": "<%- stringify(filename, 'helper/registerUser.js')  %>"
+        }
+    ]
+}

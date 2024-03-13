@@ -42,4 +42,14 @@ Sample payload:
 }
 ```
 
+`POST: /api/register` register user information with response code: `200` or `400` <br>
+Sample payload:
+```
+{
+    "email": "test@test.com",
+    "password": "test@123"
+}
+```
+Note: missing field error will appear in case either of the above key is missing in payload. <br> <br>
+
 default response for all other endpoints will be empty object `{}` with response code: `404`
