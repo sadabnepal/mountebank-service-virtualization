@@ -1,4 +1,4 @@
-function registerUser(request) {
+function loginUser(request) {
 
     const expected = {
         email: null,
@@ -36,7 +36,7 @@ function registerUser(request) {
     if (!isRequestPayloadValid(expected, actual)) {
         return responseForInvalidPayload(actual);
     }
-    
+
     function randomAlphaNumeric(length) {
         const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         let result = '';
@@ -52,7 +52,6 @@ function registerUser(request) {
             "Content-Type": "application/json"
         },
         body: {
-            id: Math.floor(Math.random() * 20) + 1,
             token: randomAlphaNumeric(20)
         }
     }

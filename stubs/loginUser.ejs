@@ -1,0 +1,24 @@
+{
+    "predicates": [
+        {
+            "and": [
+                {
+                    "equals": {
+                        "method": "POST",
+                        "path": "/api/login"
+                    }
+                },
+                {
+                    "exists": {
+                        "body": true
+                    }
+                }
+            ]
+        }
+    ],
+    "responses": [
+        {
+            "inject": "<%- stringify(filename, 'helper/loginUser.js')  %>"
+        }
+    ]
+}

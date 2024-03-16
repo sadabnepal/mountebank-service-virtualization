@@ -22,9 +22,11 @@ npm start
 ### stub details
 The project is using [mountebank](http://www.mbtest.org) as a service virtualization tool, which provides following endpoints 
 
-`GET: /api/users/<id>` fetches the user information by `user id` with response code: `200` <br>
-`GET: /api/users?page=<number>` fetches the users information by `page number` with response code: `200` <br>
-`POST: /api/users` creates the record with body information passed with response code: `201`<br>
+Base URL: http://localhost:4545/api 
+
+`GET: /users/<id>` fetches the user information by `user id` with response code: `200` <br>
+`GET: /users?page=<number>` fetches the users information by `page number` with response code: `200` <br>
+`POST: /users` creates the record with body information passed with response code: `201`<br>
 Sample payload:
 ```
 {
@@ -33,7 +35,7 @@ Sample payload:
 }
 ```
 
-`PUT: /api/users/<id>` updates the users information by `user id` with response code: `200` <br>
+`PUT: /users/<id>` updates the users information by `user id` with response code: `200` <br>
 Sample payload:
 ```
 {
@@ -42,7 +44,16 @@ Sample payload:
 }
 ```
 
-`POST: /api/register` register user information with response code: `200` or `400` <br>
+`POST: /register` register user information with response code: `200` or `400` <br>
+Sample payload:
+```
+{
+    "email": "test@test.com",
+    "password": "test@123"
+}
+```
+
+`POST: /login` provide login token for user  with response code: `200` or `400` <br>
 Sample payload:
 ```
 {
